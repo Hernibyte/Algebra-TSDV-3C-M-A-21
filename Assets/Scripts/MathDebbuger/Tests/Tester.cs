@@ -19,6 +19,7 @@ public class Tester : MonoBehaviour
         Vector3Debugger.AddVector(Vector3.down * 7, Color.green, "elVerde");
         Vector3Debugger.EnableEditorView("elVerde");
 
+
     }
 
     // Update is called once per frame

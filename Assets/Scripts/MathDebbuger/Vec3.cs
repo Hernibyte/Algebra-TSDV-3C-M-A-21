@@ -146,7 +146,8 @@ namespace CustomMath
         }
         public static float Distance(Vec3 a, Vec3 b)
         {
-            throw new NotImplementedException();
+            double num = Math.Sqrt(Math.Pow((a.x - b.x), 2) + Math.Pow((a.y - b.y), 2) + Math.Pow((a.z - b.z), 2));
+            return Convert.ToSingle(num);
         }
         public static float Dot(Vec3 a, Vec3 b)
         {
