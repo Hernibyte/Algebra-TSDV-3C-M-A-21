@@ -14,7 +14,7 @@ namespace SystemPlane
                 return new MyPlane(-normal, -normal * distance);
             }
         }
-        
+
         public MyPlane(Vec3 inNormal, Vec3 inPoint)
         {
             normal = inNormal;
@@ -35,7 +35,7 @@ namespace SystemPlane
             normal = Vec3.Cross(b - a, c -a).normalized;
             distance = -Vec3.Dot(normal, a);
         }
-                public void Flip()
+        public void Flip()
         {
             normal = -normal;
             distance = -distance;
@@ -44,13 +44,13 @@ namespace SystemPlane
         {
             distance += Vec3.Dot(normal, translation);
         }
-                public Vec3 ClosestPointOnPlane(Vec3 point)
+        public Vec3 ClosestPointOnPlane(Vec3 point)
         {
             return (point - normal * GetDistanceToThePoint(point));
         }
         public float GetDistanceToThePoint(Vec3 point)
         {
-            return Vec3.Dot(normal,point) + distance;
+            return Vec3.Dot(normal, point) + distance;
         }
         public bool GetSide(Vec3 point)
         {
